@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> castle</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a-scene physics="debug: false; gravity: -9.8">
+    <a-entity id="camera" camera look-controls wasd-controls position="21 23 21">
+      <!-- <a-box id="character" position="0 0 -3" color="blue" dynamic-body> -->
+      <a-text id="collisionLabel" value="Scrore: 0" color="black" position="0 1 0" scale="1 1 1"></a-text>
+      </a-box>
+      
+    </a-entity>
+
+
+    <a-entity id="coinContainer"></a-entity>
+    <a-animation attribute="rotation" dur="2000" to="0 360 0" repeat="indefinite"></a-animation>
+    <a-entity id="counter" position="0 2 -5" text="value: 0; color: black;"></a-entity>
+
+    
+    <a-assets>
+      <a-asset-item id="model" src="plaza_day_time.glb"></a-asset-item>
+    </a-assets>
+    <a-entity gltf-model="#model"></a-entity>
+
+
+    <a-sky src="skyimg.jpeg"></a-sky>
+
+
+   
+
+
+
+  </a-scene>
+  <script src="script.js" >   
+  </script>
+
+
+
+</body>
+</html>
